@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Customized: message receive frame-->
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomRightRadius="12dp"
+                android:bottomLeftRadius="12dp"
+                android:topRightRadius="12dp" />
+            <padding android:bottom="3dp" />
+            <solid android:color="@color/messageBox_receiveColor" />
+        </shape>
+    </item>
+</layer-list>
