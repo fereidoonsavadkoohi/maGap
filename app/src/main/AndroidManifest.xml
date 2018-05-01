@@ -37,14 +37,6 @@
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
 
-    <uses-sdk tools:overrideLibrary="co.ronash.pushe,com.google.android.vending.licensing" />
-    <permission
-        android:name="com.finalsoft.mygap.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-
-    <uses-permission android:name="com.finalsoft.mygap.permission.C2D_MESSAGE" />
-
-
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
@@ -286,43 +278,6 @@
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".push.PushDialogActivity" />
-
-        <service android:name=".push.PushListener">
-            <intent-filter>
-                <action android:name="co.ronash.pushe.RECEIVE" />
-            </intent-filter>
-        </service>
-
-        <receiver android:name="co.ronash.pushe.receiver.UpdateReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REPLACED" />
-
-                <data
-                    android:path="com.finalsoft.mygap"
-                    android:scheme="package" />
-            </intent-filter>
-        </receiver>
-
-        <receiver
-            android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
-                <category android:name="com.finalsoft.mygap" />
-            </intent-filter>
-        </receiver>
-
-        <meta-data
-            android:name="co.ronash.pushe.token"
-            android:value="PUSHE_883298655158" />
-        <meta-data
-            android:name="co.ronash.pushe.cr"
-            android:value="aHR0cDovLzRjOTAwZWRiMGE3MDRiNGZiMmYxOWI1NTVlNGUzMzUzOjFjMDVmMWY5OTVlYTRiYTU5NDBhNzFkYTNiOTIyNzdlQGNhLnB1c2hlLmlyLzgwNDQ=" />
 
     </application>
 
